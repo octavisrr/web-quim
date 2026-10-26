@@ -1,0 +1,463 @@
+backend:
+  name: github
+  repo: octavisrr/web-quim
+  branch: main
+locale: ca
+media_folder: "img"
+public_folder: "/img"
+publish_mode: simple
+collections:
+  - name: textos
+    label: "Textos de la web"
+    editor: { preview: false }
+    files:
+      - label: "Portada"
+        name: portada
+        file: "content/portada.json"
+        fields:
+          - { label: "Foto (retrat)", name: foto, widget: image, required: false }
+          - { label: "Foto de la consulta (franja ampla)", name: foto_consulta, widget: image, required: false }
+          - { label: "Nom", name: hero_name, widget: string }
+          - label: "Professió"
+            name: hero_role
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - label: "Subtítol (sota la professió)"
+            name: hero_specialty
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - label: "Lloc (línia petita de dalt)"
+            name: hero_place
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - label: "Frase de presentació"
+            name: hero_lead
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: text }
+              - { label: "Castellano", name: es, widget: text, required: false }
+              - { label: "Svenska", name: sv, widget: text, required: false }
+              - { label: "English", name: en, widget: text, required: false }
+          - label: "Text del botó"
+            name: hero_cta
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+      - label: "Qui soc"
+        name: qui_soc
+        file: "content/qui_soc.json"
+        fields:
+          - label: "Títol"
+            name: about_title
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - label: "Subtítol (important per a Google)"
+            name: about_subtitle
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - label: "Text"
+            name: about_body
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: text }
+              - { label: "Castellano", name: es, widget: text, required: false }
+              - { label: "Svenska", name: sv, widget: text, required: false }
+              - { label: "English", name: en, widget: text, required: false }
+      - label: "Experiència i formació"
+        name: formacio
+        file: "content/formacio.json"
+        fields:
+          - label: "Títol"
+            name: training_title
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - label: "Text d'experiència"
+            name: training_body
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: text }
+              - { label: "Castellano", name: es, widget: text, required: false }
+              - { label: "Svenska", name: sv, widget: text, required: false }
+              - { label: "English", name: en, widget: text, required: false }
+          - label: "Títol de la llista"
+            name: training_list_title
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - label: "Frase final (cursiva)"
+            name: training_closing
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: text }
+              - { label: "Castellano", name: es, widget: text, required: false }
+              - { label: "Svenska", name: sv, widget: text, required: false }
+              - { label: "English", name: en, widget: text, required: false }
+          - label: "Llista"
+            name: llista
+            widget: list
+            label_singular: "formació"
+            summary: "{{fields.titol.ca}}"
+            collapsed: true
+            fields:
+              - label: "Títol"
+                name: titol
+                widget: object
+                collapsed: false
+                fields:
+                  - { label: "Català", name: ca, widget: string }
+                  - { label: "Castellano", name: es, widget: string, required: false }
+                  - { label: "Svenska", name: sv, widget: string, required: false }
+                  - { label: "English", name: en, widget: string, required: false }
+              - label: "Centre o institució"
+                name: lloc
+                widget: object
+                collapsed: false
+                fields:
+                  - { label: "Català", name: ca, widget: string }
+                  - { label: "Castellano", name: es, widget: string, required: false }
+                  - { label: "Svenska", name: sv, widget: string, required: false }
+                  - { label: "English", name: en, widget: string, required: false }
+      - label: "Preguntes freqüents"
+        name: preguntes
+        file: "content/preguntes.json"
+        fields:
+          - label: "Títol"
+            name: faq_title
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - label: "Llista"
+            name: llista
+            widget: list
+            label_singular: "pregunta"
+            summary: "{{fields.pregunta.ca}}"
+            collapsed: true
+            fields:
+              - label: "Pregunta"
+                name: pregunta
+                widget: object
+                collapsed: false
+                fields:
+                  - { label: "Català", name: ca, widget: string }
+                  - { label: "Castellano", name: es, widget: string, required: false }
+                  - { label: "Svenska", name: sv, widget: string, required: false }
+                  - { label: "English", name: en, widget: string, required: false }
+              - label: "Resposta"
+                name: resposta
+                widget: object
+                collapsed: false
+                fields:
+                  - { label: "Català", name: ca, widget: text }
+                  - { label: "Castellano", name: es, widget: text, required: false }
+                  - { label: "Svenska", name: sv, widget: text, required: false }
+                  - { label: "English", name: en, widget: text, required: false }
+      - label: "Contacte"
+        name: contacte
+        file: "content/contacte.json"
+        fields:
+          - label: "Títol"
+            name: contact_title
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - label: "Introducció"
+            name: contact_intro
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: text }
+              - { label: "Castellano", name: es, widget: text, required: false }
+              - { label: "Svenska", name: sv, widget: text, required: false }
+              - { label: "English", name: en, widget: text, required: false }
+          - label: "Etiqueta adreça"
+            name: contact_address_label
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - { label: "Adreça de la consulta", name: contact_address, widget: string }
+          - label: "Nota sota l'adreça"
+            name: contact_address_note
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - label: "Text de l'enllaç al mapa"
+            name: contact_map_text
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - { label: "Enllaç a Google Maps", name: contact_map_url, widget: string }
+          - label: "Etiqueta telèfon"
+            name: contact_phone_label
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - { label: "Telèfon", name: contact_phone, widget: string }
+          - label: "Etiqueta WhatsApp"
+            name: contact_whatsapp_label
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - label: "Text de l'enllaç WhatsApp"
+            name: contact_whatsapp_text
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - { label: "Enllaç WhatsApp", name: contact_whatsapp_url, widget: string }
+          - label: "Etiqueta correu"
+            name: contact_email_label
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - { label: "Correu electrònic", name: contact_email, widget: string }
+      - label: "Formulari de contacte"
+        name: formulari
+        file: "content/formulari.json"
+        fields:
+          - label: "Títol del formulari"
+            name: form_title
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - label: "Camp: nom"
+            name: form_name
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - label: "Camp: correu"
+            name: form_email
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - label: "Camp: telèfon"
+            name: form_phone
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - label: "Camp: missatge"
+            name: form_message
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - label: "Nota sota el missatge"
+            name: form_hint
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: text }
+              - { label: "Castellano", name: es, widget: text, required: false }
+              - { label: "Svenska", name: sv, widget: text, required: false }
+              - { label: "English", name: en, widget: text, required: false }
+          - label: "Casella de consentiment"
+            name: form_consent
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: text }
+              - { label: "Castellano", name: es, widget: text, required: false }
+              - { label: "Svenska", name: sv, widget: text, required: false }
+              - { label: "English", name: en, widget: text, required: false }
+          - label: "Botó enviar"
+            name: form_submit
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - label: "Text mentre s'envia"
+            name: form_sending
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - label: "Missatge d'enviat correctament"
+            name: form_ok
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: text }
+              - { label: "Castellano", name: es, widget: text, required: false }
+              - { label: "Svenska", name: sv, widget: text, required: false }
+              - { label: "English", name: en, widget: text, required: false }
+          - label: "Missatge d'error"
+            name: form_error
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: text }
+              - { label: "Castellano", name: es, widget: text, required: false }
+              - { label: "Svenska", name: sv, widget: text, required: false }
+              - { label: "English", name: en, widget: text, required: false }
+      - label: "Menú"
+        name: menu
+        file: "content/menu.json"
+        fields:
+          - label: "Qui soc"
+            name: nav_about
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - label: "Formació"
+            name: nav_training
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - label: "Preguntes"
+            name: nav_faq
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - label: "Contacte"
+            name: nav_contact
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+      - label: "Google i peu de pàgina"
+        name: general
+        file: "content/general.json"
+        fields:
+          - label: "Títol a Google i a la pestanya"
+            name: meta_title
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }
+          - label: "Descripció a Google"
+            name: meta_description
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: text }
+              - { label: "Castellano", name: es, widget: text, required: false }
+              - { label: "Svenska", name: sv, widget: text, required: false }
+              - { label: "English", name: en, widget: text, required: false }
+          - label: "Text del peu de pàgina"
+            name: footer_text
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Català", name: ca, widget: string }
+              - { label: "Castellano", name: es, widget: string, required: false }
+              - { label: "Svenska", name: sv, widget: string, required: false }
+              - { label: "English", name: en, widget: string, required: false }

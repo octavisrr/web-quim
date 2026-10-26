@@ -1,0 +1,26 @@
+{
+  "nav_about": {
+    "ca": "Qui soc",
+    "es": "Quién soy",
+    "sv": "Om mig",
+    "en": "About"
+  },
+  "nav_training": {
+    "ca": "Formació",
+    "es": "Formación",
+    "sv": "Utbildning",
+    "en": "Background"
+  },
+  "nav_faq": {
+    "ca": "Preguntes",
+    "es": "Preguntas",
+    "sv": "Frågor",
+    "en": "FAQ"
+  },
+  "nav_contact": {
+    "ca": "Contacte",
+    "es": "Contacto",
+    "sv": "Kontakt",
+    "en": "Contact"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "training_title": {
+    "ca": "Experiència i formació",
+    "es": "Experiencia y formación",
+    "sv": "Erfarenhet och utbildning",
+    "en": "Experience and education"
+  },
+  "training_body": {
+    "ca": "Tinc experiència en el tractament de trastorns psicològics greus en l'àmbit de la salut mental pública a Catalunya i a Suècia, així com en trastorns psicològics lleus en la pràctica privada. He fet pràctiques com a psicòleg al Centre de Salut Mental de Sant Andreu, a Barcelona, i he treballat en consulta privada a la província de Girona.\n\nA Suècia, he estat psicòleg clínic al centre de psiquiatria de trastorns afectius per a adults de Göteborg (Psykiatri Affektiva mottagning, Gamlestaden), i actualment exerceixo al centre de psiquiatria de trastorns afectius per a infants i adolescents de Kungälv (BUP Affektiva mottagning, Kungälv). Alhora, treballo amb consulta privada al centre de Göteborg.",
+    "es": "Tengo experiencia en el tratamiento de trastornos psicológicos graves en el ámbito de la salud mental pública en Cataluña y en Suecia, así como en trastornos psicológicos leves en la práctica privada. Realicé prácticas como psicólogo en el Centre de Salut Mental de Sant Andreu, en Barcelona, y he trabajado en consulta privada en la provincia de Girona.\n\nEn Suecia, he trabajado como psicólogo clínico en el centro de psiquiatría de trastornos afectivos para adultos de Gotemburgo (Psykiatri Affektiva mottagning, Gamlestaden), y actualmente ejerzo en el centro de psiquiatría de trastornos afectivos para niños y adolescentes de Kungälv (BUP Affektiva mottagning, Kungälv). Al mismo tiempo, trabajo en consulta privada en el centro de Gotemburgo.",
+    "sv": "Jag har erfarenhet av att behandla allvarliga psykologiska störningar inom den offentliga psykiatrin i Katalonien och Sverige, samt mildare psykologiska problem inom privat praktik. Jag har gjort praktik som psykolog på Centre de Salut Mental de Sant Andreu i Barcelona och har arbetat i privat praktik i provinsen Girona.\n\nI Sverige har jag arbetat som klinisk psykolog vid Psykiatri Affektiva mottagning, Gamlestaden, i Göteborg, och jag arbetar för närvarande vid BUP Affektiva mottagning i Kungälv. Parallellt har jag en privat mottagning i centrala Göteborg.",
+    "en": "I have experience in the treatment of severe psychological disorders within public mental health in Catalonia and Sweden, as well as mild psychological disorders in private practice. I completed an internship as a psychologist at the Sant Andreu Mental Health Center in Barcelona, and I have worked in private practice in the province of Girona.\n\nIn Sweden, I have worked as a clinical psychologist at the Adult Affective Disorders Psychiatry Center in Gothenburg (Psykiatri Affektiva mottagning, Gamlestaden), and I currently practice at the Child and Adolescent Affective Disorders Psychiatry Center in Kungälv (BUP Affektiva mottagning, Kungälv). Alongside this, I have a private practice in central Gothenburg."
+  },
+  "training_list_title": {
+    "ca": "Formació",
+    "es": "Formación",
+    "sv": "Utbildning",
+    "en": "Education"
+  },
+  "training_closing": {
+    "ca": "Considero que aquesta professió requereix que la formació reglada es complementi amb un aprenentatge teòric i personal continuat. Tant en la meva pràctica professional com en les relacions de la meva vida personal, avanço cada dia una mica més en aquest procés d'aprenentatge i de coneixement d'un mateix.",
+    "es": "Considero que esta profesión requiere que la formación reglada se complemente con un aprendizaje teórico y personal continuo. Tanto en mi práctica profesional como en las relaciones de mi vida personal, avanzo cada día un poco más en este proceso de aprendizaje y de conocimiento de uno mismo.",
+    "sv": "Jag anser att detta yrke kräver att den formella utbildningen kompletteras med ett kontinuerligt teoretiskt lärande och personligt arbete. Både i mitt yrkesutövande och i mina personliga relationer fortsätter jag varje dag att utvecklas genom denna process av lärande och ökad självkännedom.",
+    "en": "I believe this profession requires formal training to be complemented by ongoing theoretical learning and personal work. Both in my professional practice and in my personal relationships, I continue to make progress every day in this process of learning and self-discovery."
+  },
+  "llista": [
+    {
+      "titol": {
+        "ca": "Grau en Psicologia, menció clínica",
+        "es": "Grado en Psicología, mención clínica",
+        "sv": "Psykologexamen, klinisk inriktning",
+        "en": "Bachelor's in Psychology, clinical track"
+      },
+      "lloc": {
+        "ca": "Universitat Ramon Llull",
+        "es": "Universitat Ramon Llull",
+        "sv": "Universitat Ramon Llull",
+        "en": "Ramon Llull University"
+      }
+    },
+    {
+      "titol": {
+        "ca": "Màster en Psicologia General Sanitària",
+        "es": "Máster en Psicología General Sanitaria",
+        "sv": "Master i hälsopsykologi",
+        "en": "Master's in General Health Psychology"
+      },
+      "lloc": {
+        "ca": "Universitat Ramon Llull",
+        "es": "Universitat Ramon Llull",
+        "sv": "Universitat Ramon Llull",
+        "en": "Ramon Llull University"
+      }
+    },
+    {
+      "titol": {
+        "ca": "Psicoteràpia Interpersonal (IPT)",
+        "es": "Psicoterapia Interpersonal (IPT)",
+        "sv": "Interpersonell psykoterapi (IPT)",
+        "en": "Interpersonal Psychotherapy (IPT)"
+      },
+      "lloc": {
+        "ca": "Sanitat pública de Västra Götaland",
+        "es": "Sanidad pública de Västra Götaland",
+        "sv": "Västra Götalandsregionen",
+        "en": "Västra Götaland public healthcare"
+      }
+    },
+    {
+      "titol": {
+        "ca": "Teràpia Basada en la Mentalització (MBT)",
+        "es": "Terapia Basada en la Mentalización (MBT)",
+        "sv": "Mentaliseringsbaserad terapi (MBT)",
+        "en": "Mentalization-Based Therapy (MBT)"
+      },
+      "lloc": {
+        "ca": "Göteborgs universitet",
+        "es": "Universidad de Gotemburgo",
+        "sv": "Göteborgs universitet",
+        "en": "University of Gothenburg"
+      }
+    },
+    {
+      "titol": {
+        "ca": "Supervisió clínica i seminaris de teoria psicodinàmica",
+        "es": "Supervisión clínica y seminarios de teoría psicodinámica",
+        "sv": "Klinisk handledning och seminarier i psykodynamisk teori",
+        "en": "Clinical supervision and seminars in psychodynamic theory"
+      },
+      "lloc": {
+        "ca": "Formació continuada",
+        "es": "Formación continuada",
+        "sv": "Löpande fortbildning",
+        "en": "Ongoing training"
+      }
+    }
+  ]
+}

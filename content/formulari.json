@@ -1,0 +1,68 @@
+{
+  "form_title": {
+    "ca": "Envia'm un missatge",
+    "es": "Envíame un mensaje",
+    "sv": "Skicka ett meddelande",
+    "en": "Send me a message"
+  },
+  "form_name": {
+    "ca": "Nom",
+    "es": "Nombre",
+    "sv": "Namn",
+    "en": "Name"
+  },
+  "form_email": {
+    "ca": "Correu electrònic",
+    "es": "Correo electrónico",
+    "sv": "E-post",
+    "en": "Email"
+  },
+  "form_phone": {
+    "ca": "Telèfon (opcional)",
+    "es": "Teléfono (opcional)",
+    "sv": "Telefon (valfritt)",
+    "en": "Phone (optional)"
+  },
+  "form_message": {
+    "ca": "Missatge",
+    "es": "Mensaje",
+    "sv": "Meddelande",
+    "en": "Message"
+  },
+  "form_hint": {
+    "ca": "No cal que hi expliquis detalls personals; en parlarem a la sessió.",
+    "es": "No hace falta que incluyas detalles personales; hablaremos de ello en la sesión.",
+    "sv": "Du behöver inte skriva personliga detaljer här; det pratar vi om under sessionen.",
+    "en": "There's no need to include personal details; we'll talk about it in the session."
+  },
+  "form_consent": {
+    "ca": "Accepto que aquestes dades s'utilitzin només per respondre el meu missatge.",
+    "es": "Acepto que estos datos se utilicen solo para responder a mi mensaje.",
+    "sv": "Jag godkänner att uppgifterna endast används för att besvara mitt meddelande.",
+    "en": "I agree that this information will only be used to reply to my message."
+  },
+  "form_submit": {
+    "ca": "Envia",
+    "es": "Enviar",
+    "sv": "Skicka",
+    "en": "Send"
+  },
+  "form_sending": {
+    "ca": "Enviant…",
+    "es": "Enviando…",
+    "sv": "Skickar…",
+    "en": "Sending…"
+  },
+  "form_ok": {
+    "ca": "Gràcies. He rebut el teu missatge i et respondré aviat.",
+    "es": "Gracias. He recibido tu mensaje y te responderé pronto.",
+    "sv": "Tack. Jag har fått ditt meddelande och svarar snart.",
+    "en": "Thank you. I've received your message and will reply soon."
+  },
+  "form_error": {
+    "ca": "No s'ha pogut enviar. Torna-ho a provar o escriu-me directament a quimcoma@gmail.com.",
+    "es": "No se ha podido enviar. Vuelve a intentarlo o escríbeme directamente a quimcoma@gmail.com.",
+    "sv": "Meddelandet kunde inte skickas. Försök igen eller skriv direkt till quimcoma@gmail.com.",
+    "en": "The message couldn't be sent. Try again or write directly to quimcoma@gmail.com."
+  }
+}

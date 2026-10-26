@@ -1,0 +1,35 @@
+{
+  "hero_name": "Joaquim Coma Carbó",
+  "hero_role": {
+    "ca": "Psicòleg sanitari",
+    "es": "Psicólogo General Sanitario",
+    "sv": "Legitimerad psykolog",
+    "en": "Psychologist"
+  },
+  "hero_specialty": {
+    "ca": "Psicologia clínica i psicoteràpia",
+    "es": "Psicología clínica y psicoterapia",
+    "sv": "Psykologisk behandling och psykoterapi",
+    "en": "Clinical psychology and psychotherapy"
+  },
+  "hero_place": {
+    "ca": "Göteborg · En línia",
+    "es": "Gotemburgo · Online",
+    "sv": "Göteborg · Online",
+    "en": "Gothenburg · Online"
+  },
+  "hero_lead": {
+    "ca": "Un espai per comprendre't millor i alleugerir el malestar emocional.",
+    "es": "Un espacio para comprenderte mejor y aliviar el malestar emocional.",
+    "sv": "En plats för att förstå dig själv bättre och lindra ditt psykiska lidande.",
+    "en": "A place to better understand yourself and ease emotional distress."
+  },
+  "hero_cta": {
+    "ca": "Demana una primera visita",
+    "es": "Pide una primera visita",
+    "sv": "Boka ett första samtal",
+    "en": "Book a first session"
+  },
+  "foto": "/img/foto.webp",
+  "foto_consulta": ""
+}

@@ -1,0 +1,61 @@
+{
+  "contact_title": {
+    "ca": "Contacte",
+    "es": "Contacto",
+    "sv": "Kontakt",
+    "en": "Contact"
+  },
+  "contact_intro": {
+    "ca": "Escriu-me i et respondré tan aviat com pugui.",
+    "es": "Escríbeme y te responderé lo antes posible.",
+    "sv": "Skriv till mig så svarar jag så snart jag kan.",
+    "en": "Write to me and I'll get back to you as soon as I can."
+  },
+  "contact_address_label": {
+    "ca": "Consulta",
+    "es": "Consulta",
+    "sv": "Mottagning",
+    "en": "Practice"
+  },
+  "contact_address": "Götabergsgatan 7, 411 34 Göteborg",
+  "contact_address_note": {
+    "ca": "A Vasa, al centre de la ciutat",
+    "es": "En Vasa, en el centro de la ciudad",
+    "sv": "I Vasastan, mitt i centrala Göteborg",
+    "en": "In Vasastan, in the city centre"
+  },
+  "contact_map_text": {
+    "ca": "Veure al mapa",
+    "es": "Ver en el mapa",
+    "sv": "Visa på kartan",
+    "en": "View on map"
+  },
+  "contact_map_url": "https://www.google.com/maps/search/?api=1&query=G%C3%B6tabergsgatan+7%2C+411+34+G%C3%B6teborg",
+  "contact_phone_label": {
+    "ca": "Telèfon",
+    "es": "Teléfono",
+    "sv": "Telefon",
+    "en": "Phone"
+  },
+  "contact_phone": "+46 76 262 44 05",
+  "contact_whatsapp_label": {
+    "ca": "WhatsApp",
+    "es": "WhatsApp",
+    "sv": "WhatsApp",
+    "en": "WhatsApp"
+  },
+  "contact_whatsapp_text": {
+    "ca": "Envia'm un missatge",
+    "es": "Envíame un mensaje",
+    "sv": "Skicka ett meddelande",
+    "en": "Send me a message"
+  },
+  "contact_whatsapp_url": "https://wa.link/jwnk27",
+  "contact_email_label": {
+    "ca": "Correu electrònic",
+    "es": "Correo electrónico",
+    "sv": "E-post",
+    "en": "Email"
+  },
+  "contact_email": "quimcoma@gmail.com"
+}

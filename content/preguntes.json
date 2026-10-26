@@ -1,0 +1,80 @@
+{
+  "faq_title": {
+    "ca": "Preguntes freqüents",
+    "es": "Preguntas frecuentes",
+    "sv": "Vanliga frågor",
+    "en": "Frequently asked questions"
+  },
+  "llista": [
+    {
+      "pregunta": {
+        "ca": "Com funcionen les sessions en línia?",
+        "es": "¿Cómo funcionan las sesiones online?",
+        "sv": "Hur fungerar sessionerna online?",
+        "en": "How do online sessions work?"
+      },
+      "resposta": {
+        "ca": "Ens veiem per videotrucada. Només necessites una connexió estable i un lloc tranquil on puguis parlar amb intimitat. Abans de la sessió t'envio l'enllaç.",
+        "es": "Nos vemos por videollamada. Solo necesitas una conexión estable y un lugar tranquilo donde puedas hablar con intimidad. Antes de la sesión te envío el enlace.",
+        "sv": "Vi ses via videosamtal. Du behöver bara en stabil uppkoppling och en lugn plats där du kan prata ostört. Jag skickar länken före sessionen.",
+        "en": "We meet by video call. All you need is a stable connection and a quiet place where you can talk privately. I send you the link before the session."
+      }
+    },
+    {
+      "pregunta": {
+        "ca": "En quins idiomes fas teràpia?",
+        "es": "¿En qué idiomas haces terapia?",
+        "sv": "Vilka språk har du terapi på?",
+        "en": "Which languages do you work in?"
+      },
+      "resposta": {
+        "ca": "Faig teràpia en català, castellà, suec i anglès.",
+        "es": "Hago terapia en catalán, castellano, sueco e inglés.",
+        "sv": "Jag har terapi på katalanska, spanska, svenska och engelska.",
+        "en": "I offer therapy in Catalan, Spanish, Swedish and English."
+      }
+    },
+    {
+      "pregunta": {
+        "ca": "Com és la primera visita?",
+        "es": "¿Cómo es la primera visita?",
+        "sv": "Hur går det första samtalet till?",
+        "en": "What happens in the first session?"
+      },
+      "resposta": {
+        "ca": "És un espai per conèixer-nos. M'expliques què et porta a consultar i entre tots dos valorem si aquest tractament és el que necessites i com el podem plantejar.",
+        "es": "Es un espacio para conocernos. Me cuentas qué te trae a consulta y entre los dos valoramos si este tratamiento es lo que necesitas y cómo podemos plantearlo.",
+        "sv": "Det är ett tillfälle att lära känna varandra. Du berättar vad som får dig att söka hjälp, och tillsammans bedömer vi om behandlingen passar dig och hur vi kan lägga upp den.",
+        "en": "It's a chance to get to know each other. You tell me what brings you, and together we consider whether this treatment is what you need and how we might approach it."
+      }
+    },
+    {
+      "pregunta": {
+        "ca": "Amb quina freqüència són les sessions?",
+        "es": "¿Con qué frecuencia son las sesiones?",
+        "sv": "Hur ofta träffas vi?",
+        "en": "How often are sessions?"
+      },
+      "resposta": {
+        "ca": "Normalment, una sessió setmanal. La freqüència i la durada del tractament les acordem junts segons cada cas.",
+        "es": "Normalmente, una sesión semanal. La frecuencia y la duración del tratamiento las acordamos juntos según cada caso.",
+        "sv": "Vanligtvis en session i veckan. Hur ofta och hur länge behandlingen pågår kommer vi överens om utifrån din situation.",
+        "en": "Usually once a week. We agree on the frequency and length of treatment together, depending on each case."
+      }
+    },
+    {
+      "pregunta": {
+        "ca": "Com puc demanar cita?",
+        "es": "¿Cómo puedo pedir cita?",
+        "sv": "Hur bokar jag en tid?",
+        "en": "How do I book a session?"
+      },
+      "resposta": {
+        "ca": "Pots escriure'm pel formulari d'aquesta pàgina, per WhatsApp o per correu electrònic. Et respondré per acordar un dia i una hora, en línia o a la consulta de Götabergsgatan 7.",
+        "es": "Puedes escribirme a través del formulario de esta página, por WhatsApp o por correo electrónico. Te responderé para acordar un día y una hora, online o en la consulta de Götabergsgatan 7.",
+        "sv": "Du kan skriva till mig via formuläret på den här sidan, via WhatsApp eller via e-post. Jag svarar för att boka dag och tid, online eller på mottagningen på Götabergsgatan 7.",
+        "en": "You can write to me through the form on this page, on WhatsApp or by email. I'll reply to arrange a day and time, online or at the practice on Götabergsgatan 7."
+      }
+    }
+  ]
+}
