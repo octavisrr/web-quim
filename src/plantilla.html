@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!--HEAD-->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%232C5874'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23EEF1F2' stroke-width='1.6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,400&display=swap">
+<style>/* Layout: calm two-column reading page — section label in a narrow left rail, prose on the right; hero with portrait, then a wide photo of the consulting room before the text begins. */
+:root {
+  --bg: #EEF1F2;
+  --surface: #E2E8EA;
+  --ink: #18232C;
+  --muted: #56646E;
+  --accent: #2C5874;
+  --accent-ink: #F4F7F8;
+  --line: #C9D3D8;
+  --ripple: 44, 88, 116;
+  --display: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --body: "Figtree", "Segoe UI", system-ui, sans-serif;
+  --measure: 64ch;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11181D; --surface: #18222A; --ink: #E3E9EC; --muted: #9AA9B2;
+    --accent: #8DB7D2; --accent-ink: #0E1A22; --line: #2A3740; --ripple: 141, 183, 210;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11181D; --surface: #18222A; --ink: #E3E9EC; --muted: #9AA9B2;
+  --accent: #8DB7D2; --accent-ink: #0E1A22; --line: #2A3740; --ripple: 141, 183, 210;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--body); font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 10; background: var(--bg);
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+.wrap {
+  max-width: 1120px; margin: 0 auto;
+  padding-left: max(24px, env(safe-area-inset-left, 0px));
+  padding-right: max(24px, env(safe-area-inset-right, 0px));
+}
+
+/* Header */
+.top {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent; transition: border-color .3s;
+}
+.top.scrolled { border-bottom-color: var(--line); }
+.top .wrap { display: flex; align-items: center; gap: 24px; padding-block: 14px; }
+.brand { font-family: var(--display); font-size: 19px; color: var(--ink); text-decoration: none; white-space: nowrap; }
+.nav { display: flex; gap: 22px; margin-left: auto; }
+.nav a { color: var(--muted); text-decoration: none; font-size: 15px; }
+.nav a:hover { color: var(--ink); }
+.langs { display: flex; gap: 2px; border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
+.langs a {
+  text-decoration: none; display: inline-block;
+  font: 600 12px/1 var(--body); letter-spacing: .08em; text-transform: uppercase;
+  border: 0; background: none; color: var(--muted); padding: 7px 9px; border-radius: 999px; cursor: pointer;
+}
+.langs a[aria-current="page"] { background: var(--ink); color: var(--bg); }
+@media (max-width: 860px) {
+  .nav { display: none; }
+  .langs { margin-left: auto; }
+}
+
+/* Hero */
+.hero { position: relative; overflow: hidden; }
+.hero .wrap { position: relative; padding-block: 88px 80px; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); align-items: center; gap: 48px; }
+.hero-text { display: grid; gap: 28px; min-width: 0; }
+.portrait {
+  width: 100%; max-width: 400px; aspect-ratio: 1; height: auto; justify-self: center;
+  border-radius: 50%; object-fit: cover; background: var(--surface);
+  box-shadow: 0 30px 60px -30px rgba(var(--ripple), .55);
+}
+@media (max-width: 760px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  .portrait { order: -1; max-width: 168px; justify-self: start; }
+  .hero .wrap { padding-block: 48px 64px; }
+}
+body.loading main, body.loading header { opacity: 0; }
+main, header { transition: opacity .35s; }
+.place {
+  font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
+}
+.hero h1 {
+  font-family: var(--display); font-weight: 300; font-size: clamp(46px, 8.4vw, 104px);
+  line-height: .98; letter-spacing: -.02em; margin: 0; text-wrap: balance; max-width: 11ch;
+}
+.specialty { margin: -16px 0 0; font-size: 15px; font-weight: 500; letter-spacing: .02em; color: var(--muted); }
+.hero h1 em { display: block; font-style: italic; font-size: .42em; letter-spacing: 0; color: var(--accent); margin-top: 18px; font-weight: 400; }
+.lead { font-size: clamp(18px, 2vw, 21px); max-width: 38ch; color: var(--ink); margin: 0; text-wrap: pretty; }
+.btn {
+  display: inline-flex; align-items: center; gap: 10px; justify-self: start;
+  background: var(--accent); color: var(--accent-ink); text-decoration: none;
+  font: 600 15px/1 var(--body); padding: 16px 22px; border-radius: 999px; border: 0; cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px -10px rgba(var(--ripple), .7); }
+.btn svg { width: 16px; height: 16px; }
+
+/* Consulting-room photo */
+.room-wrap { padding-block: 0 72px; }
+.room { margin: 0; border-radius: 18px; overflow: hidden; background: var(--surface); aspect-ratio: 16 / 7; max-width: 100%; }
+.room img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 55%; display: block; }
+@media (max-width: 760px) {
+  .room-wrap { padding-block: 0 48px; }
+  .room { aspect-ratio: 4 / 3; border-radius: 14px; }
+}
+
+/* Sections */
+.section { border-top: 1px solid var(--line); }
+.section .wrap { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 48px; padding-block: 80px; }
+.label {
+  font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
+  position: sticky; top: calc(env(safe-area-inset-top, 0px) + 84px); align-self: start;
+}
+.content { min-width: 0; max-width: var(--measure); display: grid; gap: 28px; }
+.content h2 {
+  font-family: var(--display); font-weight: 400; font-size: clamp(30px, 3.6vw, 42px);
+  line-height: 1.12; letter-spacing: -.01em; margin: 0; text-wrap: balance;
+}
+hgroup { display: grid; gap: 10px; margin: 0; }
+.subtitle { margin: 0; font-size: 18px; color: var(--accent); font-weight: 500; }
+.prose p { margin: 0 0 1em; text-wrap: pretty; }
+.prose p:last-child { margin-bottom: 0; }
+@media (max-width: 760px) {
+  .section .wrap { grid-template-columns: 1fr; gap: 14px; padding-block: 56px; }
+  .label { display: none; }
+}
+
+/* Training list */
+.creds { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.creds li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 24px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.creds .t { font-weight: 500; }
+.creds .p { color: var(--muted); font-size: 15px; text-align: right; }
+.sub { font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 8px 0 -12px; }
+.closing { font-family: var(--display); font-style: italic; font-size: 22px; line-height: 1.5; color: var(--ink); margin: 0; padding-left: 20px; border-left: 2px solid var(--accent); }
+@media (max-width: 520px) {
+  .creds li { grid-template-columns: 1fr; }
+  .creds .p { text-align: left; }
+}
+
+/* FAQ */
+.faq { border-top: 1px solid var(--line); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary {
+  list-style: none; cursor: pointer; padding: 20px 40px 20px 0; position: relative;
+  font-family: var(--display); font-size: 21px; line-height: 1.35;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: ""; position: absolute; right: 6px; top: 50%; width: 12px; height: 12px; margin-top: -8px;
+  border-right: 1.5px solid var(--muted); border-bottom: 1.5px solid var(--muted);
+  transform: rotate(45deg); transition: transform .25s;
+}
+.faq details[open] summary::after { transform: rotate(225deg); margin-top: -2px; }
+.faq .a { padding: 0 0 22px; color: var(--muted); max-width: 58ch; }
+.faq .a p { margin: 0 0 .8em; }
+
+/* Contact */
+.contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 40px; max-width: none; }
+.content.wide { max-width: none; }
+.direct { display: grid; gap: 22px; align-content: start; }
+.direct div { display: grid; gap: 2px; }
+.direct .k { font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.direct .v { font-size: 19px; user-select: all; word-break: break-word; }
+.direct .v a { user-select: auto; }
+.direct .note { color: var(--muted); font-size: 15px; }
+.direct .maplink { font-size: 15px; margin-top: 4px; justify-self: start; }
+form { background: var(--surface); border-radius: 16px; padding: 28px; display: grid; gap: 16px; }
+form h3 { font-family: var(--display); font-weight: 400; font-size: 24px; margin: 0; }
+.field { display: grid; gap: 6px; }
+.field label { font-size: 14px; font-weight: 500; }
+input, textarea {
+  font: inherit; font-size: 16px; color: var(--ink); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; width: 100%;
+}
+input:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color: transparent; }
+textarea { min-height: 130px; resize: vertical; }
+.hint { font-size: 14px; color: var(--muted); margin: 0; }
+.check { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start; font-size: 14px; color: var(--muted); }
+.check input { width: 18px; height: 18px; margin-top: 2px; accent-color: var(--accent); }
+.status { font-size: 15px; margin: 0; }
+.status.ok { color: var(--accent); }
+.status.err { color: #B4433A; }
+.hp { position: absolute; left: -9999px; }
+@media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } }
+
+footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+footer .wrap { padding-block: 32px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn, .faq summary::after { transition: none; }
+}
+</style>
+</head>
+<body>
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#inici" data-t="hero_name"></a>
+    <nav class="nav" aria-label="Menú">
+      <a href="#qui-soc" data-t="nav_about"></a>
+      <a href="#formacio" data-t="nav_training"></a>
+      <a href="#preguntes" data-t="nav_faq"></a>
+      <a href="#contacte" data-t="nav_contact"></a>
+    </nav>
+    <div class="langs" role="group" aria-label="Idioma">
+      <a data-lang="ca" lang="ca" hreflang="ca">CA</a>
+      <a data-lang="es" lang="es" hreflang="es">ES</a>
+      <a data-lang="sv" lang="sv" hreflang="sv">SV</a>
+      <a data-lang="en" lang="en" hreflang="en">EN</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inici">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <div class="place" data-t="hero_place"></div>
+        <h1><span data-t="hero_name"></span><em data-t="hero_role"></em></h1>
+        <p class="specialty" data-t="hero_specialty"></p>
+        <p class="lead" data-t="hero_lead"></p>
+        <a class="btn" href="#contacte"><span data-t="hero_cta"></span>
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <img class="portrait" id="portrait" alt="" width="720" height="720">
+    </div>
+  </section>
+
+  <div class="wrap room-wrap">
+    <figure class="room"><img id="room" alt="" width="1600" height="900" loading="lazy"></figure>
+  </div>
+
+  <section class="section" id="qui-soc">
+    <div class="wrap">
+      <div class="label" data-t="nav_about"></div>
+      <div class="content">
+        <hgroup><h2 data-t="about_title"></h2><p class="subtitle" data-t="about_subtitle"></p></hgroup>
+        <div class="prose" data-p="about_body"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="formacio">
+    <div class="wrap">
+      <div class="label" data-t="nav_training"></div>
+      <div class="content">
+        <h2 data-t="training_title"></h2>
+        <div class="prose" data-p="training_body"></div>
+        <p class="sub" data-t="training_list_title"></p>
+        <ul class="creds" id="creds"></ul>
+        <p class="closing" data-t="training_closing"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="preguntes">
+    <div class="wrap">
+      <div class="label" data-t="nav_faq"></div>
+      <div class="content">
+        <h2 data-t="faq_title"></h2>
+        <div class="faq" id="faq"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contacte">
+    <div class="wrap">
+      <div class="label" data-t="nav_contact"></div>
+      <div class="content wide">
+        <h2 data-t="contact_title"></h2>
+        <div class="contact-grid">
+          <div class="direct">
+            <p class="hint" style="font-size:17px;color:var(--ink)" data-t="contact_intro"></p>
+            <div><span class="k" data-t="contact_address_label"></span><span class="v addr" data-t="contact_address"></span><span class="note" data-t="contact_address_note"></span><a class="maplink" id="map-link" target="_blank" rel="noopener" data-t="contact_map_text"></a></div>
+            <div><span class="k" data-t="contact_phone_label"></span><span class="v"><a id="phone-link" data-t="contact_phone"></a></span></div>
+            <div><span class="k" data-t="contact_whatsapp_label"></span><span class="v"><a id="wa-link" target="_blank" rel="noopener" data-t="contact_whatsapp_text"></a></span></div>
+            <div><span class="k" data-t="contact_email_label"></span><span class="v"><a id="mail-link" data-t="contact_email"></a></span></div>
+          </div>
+          <form id="contact-form" name="contacte" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+            <input type="hidden" name="form-name" value="contacte">
+            <p class="hp"><label>No omplir: <input id="bot-field" name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+            <h3 data-t="form_title"></h3>
+            <div class="field"><label for="f-name" data-t="form_name"></label><input id="f-name" name="nom" autocomplete="name" required></div>
+            <div class="field"><label for="f-email" data-t="form_email"></label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="f-phone" data-t="form_phone"></label><input id="f-phone" name="telefon" type="tel" autocomplete="tel"></div>
+            <div class="field"><label for="f-msg" data-t="form_message"></label><textarea id="f-msg" name="missatge" required></textarea><p class="hint" data-t="form_hint"></p></div>
+            <input type="hidden" name="idioma" id="f-lang" value="ca">
+            <label class="check"><input type="checkbox" id="f-consent" name="consentiment" required><span data-t="form_consent"></span></label>
+            <button class="btn" type="submit" id="f-submit"><span data-t="form_submit"></span></button>
+            <p class="status" id="f-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span data-t="footer_text"></span>
+    <span id="year"></span>
+  </div>
+</footer>
+
+<script>/* ============================================================
+   Els textos són a la carpeta /content i es canvien des del panell
+   joaquimcoma.com/admin. En desar, Netlify executa build.mjs, que
+   genera una pàgina per idioma amb els textos ja posats (bo per a Google).
+   ============================================================ */
+const CONFIG = { PREVIEW: false };
+const LANGS = ["ca", "es", "sv", "en"];
+const SECTIONS = ["portada", "qui_soc", "formacio", "preguntes", "contacte", "formulari", "menu", "general"];
+const DATA = /*__DATA__*/null;
+let TEXTS = {}, LISTS = {};
+let lang = document.documentElement.lang || "ca";
+
+function load(data) {
+  TEXTS = {}; LISTS = {};
+  Object.values(data).forEach(sec => {
+    Object.entries(sec || {}).forEach(([k, v]) => {
+      if (k === "llista") return;
+      TEXTS[k] = v;
+    });
+  });
+  Object.entries(data).forEach(([id, sec]) => { if (sec && Array.isArray(sec.llista)) LISTS[id] = sec.llista; });
+}
+function tr(v) {
+  if (v == null) return "";
+  if (typeof v === "string") return v;
+  return (v[lang] && String(v[lang]).trim()) || v.ca || "";
+}
+function t(key) { return tr(TEXTS[key]); }
+/* --- Idioma: cada idioma té la seva adreça (/, /es/, /sv/, /en/) --- */
+const PATHS = { ca: "/", es: "/es/", sv: "/sv/", en: "/en/" };
+function redirectIfNeeded() {
+  // Enllaços antics amb #es, #sv, #en
+  const h = location.hash.replace("#", "");
+  if (LANGS.includes(h) && h !== lang) { location.replace(PATHS[h]); return true; }
+  // Primera visita a la portada: porta la persona al seu idioma (no als cercadors)
+  if (location.pathname !== "/" || /bot|crawl|spider|google|bing|lighthouse|headless/i.test(navigator.userAgent)) return false;
+  let saved = null;
+  try { saved = localStorage.getItem("lang"); } catch (e) {}
+  const nav = (navigator.language || "ca").slice(0, 2).toLowerCase();
+  const want = LANGS.includes(saved) ? saved : (LANGS.includes(nav) ? nav : "ca");
+  if (want !== "ca") { location.replace(PATHS[want] + location.hash); return true; }
+  return false;
+}
+
+/* --- Formulari (Netlify Forms) --- */
+function initForm() {
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("f-status");
+  const btn = document.getElementById("f-submit");
+  form.addEventListener("submit", async ev => {
+    ev.preventDefault();
+    status.className = "status"; status.textContent = "";
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    btn.disabled = true;
+    const label = btn.querySelector("span");
+    label.textContent = t("form_sending");
+    let ok = false;
+    if (CONFIG.PREVIEW) {
+      await new Promise(r => setTimeout(r, 600));
+      ok = true;
+    } else {
+      try {
+        const res = await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(new FormData(form)).toString()
+        });
+        ok = res.ok;
+      } catch (e) { ok = false; }
+    }
+    btn.disabled = false;
+    label.textContent = t("form_submit");
+    if (ok) { form.reset(); status.className = "status ok"; status.textContent = t("form_ok"); }
+    else { status.className = "status err"; status.textContent = t("form_error"); }
+  });
+}
+
+/* --- Inici --- */
+if (!redirectIfNeeded()) {
+  load(DATA);
+  document.querySelectorAll(".langs a").forEach(a => a.addEventListener("click", () => {
+    try { localStorage.setItem("lang", a.dataset.lang); } catch (e) {}
+  }));
+  const headerEl = document.getElementById("top");
+  addEventListener("scroll", () => headerEl.classList.toggle("scrolled", scrollY > 8), { passive: true });
+  initForm();
+}
+</script>
+</body>
+</html>
